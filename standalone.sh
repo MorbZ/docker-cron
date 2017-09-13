@@ -1,6 +1,6 @@
 #!/bin/bash
 cronfile=/etc/cron.d/cron
-touch $cronfile
+cat /dev/null > $cronfile
 for cronvar in ${!CRON_*}; do
 	cronvalue=${!cronvar}
 	echo "Installing $cronvar"
